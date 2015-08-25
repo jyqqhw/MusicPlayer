@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.az.mediaplayer"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/music_title"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.az.mediaplayer.ShowActivity">
+        </activity>
+        
+        <activity android:name="com.az.mediaplayer.LaunchActivity"
+            android:theme="@style/LaunchAppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.az.mediaplayer.ListActivity"></activity>
+        
+        <activity android:name="com.az.mediaplayer.choose_activity"
+            android:theme="@style/NewAppTheme">
+        </activity>
+        
+        <service android:name="com.az.mediaplayer.domain.MusicService">
+        </service>
+        
+    </application>
+
+</manifest>
